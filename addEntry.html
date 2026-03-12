@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling/reset.css">
+    <link rel="stylesheet" href="styling/addEntry.css">
+    <title>Post</title>
+</head>
+<body>
+    <header>
+        <nav role = "navigation">
+            <a href="index.html"><h1 id="myname">Nathan Berhane</h1></a>
+            <ul class = "topbar">
+                <a class = "link" href="education.html"><li>Education</li></a>
+                <a class = "link" href="portfolio.html"><li>Portfolio</li></a>
+                <a class = "link" href="skills.html"><li>Skills</li></a>
+                <a class = "link" href="login.html"><li>Login</li></a>
+                <a class = "link" href="addEntry.html"><li>Post</li></a>
+                <a class = "link" href = "blog.html"><li>Blog</li></a>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <section>
+        <h1 id = "title">Post</h1>
+
+        <form action="process.php">
+            <fieldset>
+                <legend>Add Blog</legend>
+            
+            
+                <input type="text" id="blogTitle" placeholder="Title"><br>
+
+        
+                <textarea name="Blog text" id="blogText" placeholder="Enter your text here"></textarea><br>
+            
+            
+                
+
+                <input type="submit" value="Post" class="button">
+                <input type="reset" value = "Clear" class="button">
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        <hr>
+        <p class = "Copyright">&copy; 2026 Nathan Berhane. All rights reserved.</p>
+    </footer>
+</body>
+</html>
