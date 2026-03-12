@@ -1,0 +1,75 @@
+/* styles the nav bar and my name in the header */
+nav{
+    display: flex;
+    justify-content: space-around; 
+    gap: 2rem;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+    padding-top:1rem;
+}
+
+.topbar a{
+    color: white; /*Makes colour of links in header white*/
+}
+
+#myname{
+    font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
+    padding-top:1rem;
+    color:white;
+    font-size: 2rem;
+
+}
+
+a{
+    text-decoration:none; /*Gets rid of underline of links*/
+}
+
+/*Styles the title of the page*/
+#title{
+    text-align: center;
+    text-decoration: underline;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+article{
+    padding-left: 1rem;
+}
+
+/* Indents bullet points */
+article ul{
+    margin: 1em;
+}
+
+
+
+/* Sets colour of text for project links to black */
+.projectLink{
+    color: black; 
+}
+
+/* Creates spacing to increase readability */
+.headline{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.date{
+    font-family: 'Playfair', 'Courier New', 'Courier', 'monospace';
+    padding-left: 2em; /*Creates space to make dates more visible*/
+}
+
+/*Makes it easier to process different sections*/
+h2{
+    background-color: rgb(154, 242, 242);
+}
+
+

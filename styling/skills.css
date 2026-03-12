@@ -1,0 +1,87 @@
+/* styles the nav bar and my name in the header */
+nav{
+    display: flex;
+    justify-content: space-around; 
+    gap: 2rem;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+    padding-top:1rem;
+}
+
+.topbar a{
+    color: white; /*Makes colour of links in header white*/
+}
+
+#myname{
+    font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
+    padding-top:1rem;
+    color:white;
+    font-size: 2rem;
+
+}
+
+a{
+    text-decoration:none; /*Gets rid of underline of links*/
+}
+
+
+/*Styles the title of the page*/
+#title{
+    text-align: center;
+    text-decoration: underline;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+
+/* styles skills grid, defining columns and grid areas*/
+#skillsGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: '. python . java .'
+                          '. html . css .'
+                          '. git . github .';
+}
+
+#python{
+    grid-area: python;
+}
+
+#java{
+    grid-area: java;
+}
+
+#html{
+    grid-area: html;
+}
+
+#css{
+    grid-area: css;
+}
+
+#git{
+    grid-area: git;
+}
+
+#github{
+    grid-area: github;
+}
+
+#javaImage, #htmlImage, #cssImage, #gitImage, #githubImage{
+    width:50%;
+}
+
+#pythonImage{
+    width: 70%;
+}
+#githubImage{
+    background-color: black;
+}

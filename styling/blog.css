@@ -1,0 +1,52 @@
+/* styles the nav bar and my name in the header */
+nav{
+    display: flex;
+    justify-content: space-around; 
+    gap: 2rem;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+    padding-top:1rem;
+}
+
+.topbar a{
+    color: white; /*Makes colour of links in header white*/
+}
+
+#myname{
+    font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
+    padding-top:1rem;
+    color:white;
+    font-size: 2rem;
+
+}
+
+a{
+    text-decoration:none; /*Gets rid of underline of links*/
+}
+
+/*Styles the title of the page*/
+#title{
+    text-align: center;
+    text-decoration: underline;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+
+.blogTitle{
+    font-family: 'Google Sans', 'Courier New', 'Courier', 'monospace';
+  
+}
+
+.blogEntry{
+    padding: 1em;
+}
+

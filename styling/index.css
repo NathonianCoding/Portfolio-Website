@@ -1,0 +1,94 @@
+/* styles the nav bar and my name in the header */
+nav{
+    display: flex;
+    justify-content: space-around; 
+    gap: 2rem;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+    padding-top:1rem;
+}
+
+.topbar a{
+    color: white; /*Makes colour of links in header white*/
+}
+
+#myname{
+    font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
+    padding-top:1rem;
+    color:white;
+    font-size: 2rem;
+
+}
+
+a{
+    text-decoration:none; /*Gets rid of underline of links*/
+}
+
+/* Uses flex to put the image next to the about me paragraph */
+#aboutme{
+    display:flex;
+    gap:1rem;
+    margin:1rem;
+
+}
+
+#profilePicture{
+    width: 50%;
+}
+
+
+
+#githubIcon{
+    width:100%; /*Sets width to the width of the grid cell*/
+    background-color: black;
+    
+    
+    
+}
+
+#linkedInIcon{
+    width:100%; /*Sets width to the width ofd the grid  cell*/
+}
+
+#importantLinks{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: '. githubLink . linkedInLink .';
+  
+    justify-content: space-around;
+}
+
+#githubLink{
+    padding:0;
+    grid-area: githubLink;
+    transition: padding 1s; /* Takes 1 second to change the padding*/
+}
+#linkedInLink{
+    padding:0;
+    grid-area: linkedInLink;
+    transition: padding 1s; /* Takes 1 second to change the padding*/
+}
+
+
+
+
+/* Sets the final padding of the links*/
+#githubLink:hover{
+    padding: 1em;
+   
+    
+}
+
+#linkedInLink:hover{
+    padding:1em;
+    
+}
+
