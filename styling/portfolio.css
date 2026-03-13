@@ -32,13 +32,7 @@ a{
     text-decoration:none; /*Gets rid of underline of links*/
 }
 
-/*Styles the title of the page*/
-#title{
-    text-align: center;
-    text-decoration: underline;
-    padding: 1rem;
-    font-size: 2rem;
-}
+
 
 article{
     padding-left: 1rem;
@@ -71,5 +65,51 @@ article ul{
 h2{
     background-color: rgb(154, 242, 242);
 }
+
+/* Defines page grid layout */
+#pageGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'header header header header header'
+                          '. . title . .'
+                          'experience experience . projects projects'
+                          'volunteering volunteering . cv cv'
+                          'footer footer footer footer footer';
+}
+
+header{
+    grid-area: header;
+}
+
+/*Styles the title of the page*/
+#title{
+    text-align: center;
+    text-decoration: underline;
+    padding: 1rem;
+    font-size: 2rem;
+    grid-area: title;
+}
+
+#experience{
+    grid-area: experience;
+}
+
+#projects{
+    grid-area: projects;
+}
+
+#volunteering{
+    grid-area: volunteering;
+}
+
+#cv{
+    grid-area: cv;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
 
 

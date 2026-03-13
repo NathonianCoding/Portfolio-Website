@@ -38,8 +38,16 @@ a{
     text-decoration: underline;
     padding: 1rem;
     font-size: 2rem;
+    grid-area: title;
 }
 
+/* Creates spacing to increase readability */
+.headline{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+   
+}
 
 .blogTitle{
     font-family: 'Google Sans', 'Courier New', 'Courier', 'monospace';
@@ -50,3 +58,24 @@ a{
     padding: 1em;
 }
 
+/* Styles page grid layout */
+#pageGrid{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 'header header header'
+                        '. title .'
+                        '. blogs .'
+                        'footer footer footer';
+}
+
+header{
+    grid-area: header;
+}
+
+#blogs{
+    grid-area: blogs;
+}
+
+footer{
+    grid-area: footer;
+}

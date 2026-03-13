@@ -34,15 +34,44 @@ a{
     text-decoration:none; /*Gets rid of underline of links*/
 }
 
+
+
+/* Makes bullet points visible */
+article{
+    padding-left: 1rem;
+}
+
+/* Styles page grid layout */
+#pageGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'header header header header header'
+                        '. . title . .'
+                        'uni uni . sixthForm sixthForm'
+                        'footer footer footer footer footer';
+}
+
+header{
+    grid-area: header;
+}
+
 /*Styles the title of the page*/
 #title{
     text-align: center;
     text-decoration: underline;
     padding: 1rem;
     font-size: 2rem;
+    grid-area: title;
 }
 
-article{
-    padding-left: 1rem;
+#university{
+    grid-area: uni;
 }
+ #sixthForm{
+    grid-area: sixthForm;
+ }
+ footer{
+    grid-area: footer;
+ }
+
 

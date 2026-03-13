@@ -41,7 +41,7 @@ a{
 }
 
 #profilePicture{
-    width: 50%;
+    width: 100%;
 }
 
 
@@ -58,20 +58,44 @@ a{
     width:100%; /*Sets width to the width ofd the grid  cell*/
 }
 
-#importantLinks{
+/* Defines grid layout for the entire index.html page */
+#pageGrid{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: '. githubLink . linkedInLink .';
+    grid-template-areas: 'header header header header header'
+                          '. aboutme aboutme aboutme .'
+                          '. githubLink . linkedInLink .'
+                          'footer footer footer footer footer';
   
-    justify-content: space-around;
+    /* justify-content: space-around; */
+}
+
+header{
+    grid-area: header;
+}
+#aboutme{
+    grid-area: aboutme;
 }
 
 #githubLink{
+    grid-area: githubLink;
+}
+
+#linkedInLink{
+    grid-area: linkedInLink;
+}
+
+footer{
+    grid-area: footer;    
+}
+
+/* Handles hover effect */
+#githubLink a{
     padding:0;
     grid-area: githubLink;
     transition: padding 1s; /* Takes 1 second to change the padding*/
 }
-#linkedInLink{
+#linkedInLink a{
     padding:0;
     grid-area: linkedInLink;
     transition: padding 1s; /* Takes 1 second to change the padding*/
@@ -80,14 +104,16 @@ a{
 
 
 
+
+
 /* Sets the final padding of the links*/
-#githubLink:hover{
+#githubLink a:hover{
     padding: 1em;
    
     
 }
 
-#linkedInLink:hover{
+#linkedInLink a:hover{
     padding:1em;
     
 }

@@ -39,6 +39,7 @@ a{
     text-decoration: underline;
     padding: 1rem;
     font-size: 2rem;
+    grid-area: title;
 }
 
 
@@ -68,10 +69,24 @@ fieldset{
     border:none; 
 }
 
-/*Styles the title of the page*/
-#title{
-    text-align: center;
-    text-decoration: underline;
-    padding: 1rem;
-    font-size: 2rem;
+/* Styles page layout */
+#pageGrid{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 'header header header'
+                         '. title .'
+                         '. form .'
+                         'footer footer footer';
+
+}
+
+header{
+    grid-area: header;
+}
+
+#loginForm{
+    grid-area: form;
+}
+footer{
+    grid-area: footer;
 }

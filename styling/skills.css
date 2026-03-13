@@ -39,18 +39,29 @@ a{
     text-decoration: underline;
     padding: 1rem;
     font-size: 2rem;
+    grid-area: title;
 }
 
 
 /* styles skills grid, defining columns and grid areas*/
-#skillsGrid{
+#pageGrid{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: '. python . java .'
+    grid-template-areas: 'header header header header header'
+                        '. . title . .'
+                        '. python . java .'
                           '. html . css .'
-                          '. git . github .';
+                          '. git . github .'
+                          'footer footer footer footer footer';
 }
 
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
 #python{
     grid-area: python;
 }
