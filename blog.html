@@ -13,51 +13,61 @@
     <title>Blog</title>
 </head>
 <body>
-    <header>
-        <nav role = "navigation">
-            <a href="index.html"><h1 id="myname">Nathan Berhane</h1></a>
-            <ul class = "topbar">
-                <a class = "link" href="education.html"><li>Education</li></a>
-                <a class = "link" href="portfolio.html"><li>Portfolio</li></a>
-                <a class = "link" href="skills.html"><li>Skills</li></a>
-                <a class = "link" href="login.html"><li>Login</li></a>
-                <a class = "link" href="addEntry.html"><li>Post</li></a>
-                <a class = "link" href = "blog.html"><li>Blog</li></a>
-            </ul>
-        </nav>
-    </header>
-    <br>
-    <section>
+    <div id="pageGrid">
+        <header>
+            <nav role = "navigation">
+                <a href="index.html"><h1 id="myname">Nathan Berhane</h1></a>
+                <ul class = "topbar">
+                    <a class = "link" href="education.html"><li>Education</li></a>
+                    <a class = "link" href="portfolio.html"><li>Portfolio</li></a>
+                    <a class = "link" href="skills.html"><li>Skills</li></a>
+                    <a class = "link" href="login.html"><li>Login</li></a>
+                    <a class = "link" href="addEntry.html"><li>Post</li></a>
+                    <a class = "link" href = "blog.html"><li>Blog</li></a>
+                </ul>
+            </nav>
+        </header>
+
         <h1 id = "title">My Blog</h1>
 
-        <article class="blogEntry">
-            <h1 class="blogTitle">AI and Operations Internship at PolishPad</h1>
-            <p> 
-                I am proud to announce that I have secured an internship at PolishPad.
-                I will be leveraging AI tools to optimise workflow and improve user experience.
-                I look forward to this new challenge!
-            </p>
+        <section id="blogs">
+            
 
-        </article>
+            <article class="blogEntry">
+                <div class="headline">
+                    <h1 class="blogTitle">AI and Operations Internship at PolishPad</h1>
+                    <i>March 2026</i>
+                </div>
+                <p> 
+                    I am proud to announce that I have secured an internship at PolishPad.
+                    I will be leveraging AI tools to optimise workflow and improve user experience.
+                    I look forward to this new challenge!
+                </p>
 
-    
+            </article>
 
-        <article class = "blogEntry">
-            <h1 class="blogTitle">Course Representative at Queen Mary Univeristy of London</h1>
-            <p>
-                I was elected course rep for my course (Computer Science with AI) in October.
-            </p>
-            <p>
-                I look forward to representing the voices of my peers.
-            </p>
-
-        </article>
-    </section>
         
 
-    <footer>
-        <hr>
-        <p class = "Copyright">&copy; 2026 Nathan Berhane. All rights reserved.</p>
-    </footer>
+            <article class = "blogEntry">
+                <div class="headline">
+                    <h1 class="blogTitle">Course Representative at Queen Mary Univeristy of London</h1>
+                    <i>Octber 2025</i>
+                </div>
+                <p>
+                    I was elected course rep for my course (Computer Science with AI) in October.
+                </p>
+                <p>
+                    I look forward to representing the voices of my peers.
+                </p>
+
+            </article>
+        </section>
+            
+
+        <footer>
+            <hr>
+            <p class = "Copyright">&copy; 2026 Nathan Berhane. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
