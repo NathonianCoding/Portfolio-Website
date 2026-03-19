@@ -4,8 +4,9 @@ nav{
     justify-content: space-around; 
     gap: 2rem;
     background-color: rgb(0, 179, 255);
-    list-style: none;
 }
+
+/* Styles the list of links in header */
 
 .topbar{
     display: flex;
