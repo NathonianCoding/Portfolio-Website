@@ -1,0 +1,124 @@
+/* styles the nav bar and my name in the header */
+nav{
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgb(0, 179, 255);
+}
+
+/* Styles the list of links in header */
+
+.topbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+    padding-top:1rem;
+}
+
+.topbar a{
+    color: white; /*Makes colour of links in header white*/
+}
+
+#myname{
+    font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
+    padding-top:1rem;
+    color:white;
+    font-size: 2rem;
+
+}
+
+a{
+    text-decoration:none; /*Gets rid of underline of links*/
+}
+
+/* Uses flex to put the image next to the about me paragraph */
+#aboutme{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    margin:1rem;
+
+}
+
+#profilePicture{
+    width: 100%;
+}
+
+
+
+#githubIcon{
+    width:100%; /*Sets width to the width of the grid cell*/
+    background-color: black;
+    
+    
+    
+}
+
+#linkedInIcon{
+    width:100%; /*Sets width to the width ofd the grid  cell*/
+}
+
+/* Defines grid layout for the entire index.html page */
+#pageGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: 'header header header'
+                          'aboutme aboutme aboutme'
+                          'githubLink . linkedInLink'
+                          
+                          'footer footer footer';
+  
+    /* justify-content: space-around; */
+}
+
+header{
+    grid-area: header;
+}
+#aboutme{
+    grid-area: aboutme;
+}
+
+#githubLink{
+    grid-area: githubLink;
+}
+
+#linkedInLink{
+    grid-area: linkedInLink;
+}
+
+footer{
+    grid-area: footer;    
+}
+
+/* Handles hover effect */
+#githubLink a{
+    padding:0;
+    grid-area: githubLink;
+    transition: padding 1s; /* Takes 1 second to change the padding*/
+}
+#linkedInLink a{
+    padding:0;
+    grid-area: linkedInLink;
+    transition: padding 1s; /* Takes 1 second to change the padding*/
+}
+
+
+
+
+
+
+/* Sets the final padding of the links*/
+#githubLink a:hover{
+    padding: 1em;
+   
+    
+}
+
+#linkedInLink a:hover{
+    padding:1em;
+    
+}

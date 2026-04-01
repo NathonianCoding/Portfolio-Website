@@ -1,0 +1,83 @@
+/* styles the nav bar and my name in the header */
+nav{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around; 
+    gap: 2rem;
+    background-color: rgb(0, 179, 255);
+}
+/* Styles the list of links in header */
+
+.topbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+    padding-top:1rem;
+}
+
+.topbar a{
+    color: white; /*Makes colour of links in header white*/
+}
+
+#myname{
+    font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
+    padding-top:1rem;
+    color:white;
+    font-size: 2rem;
+
+}
+
+a{
+    text-decoration:none; /*Gets rid of underline of links*/
+}
+
+/*Styles the title of the page*/
+#title{
+    text-align: center;
+    text-decoration: underline;
+    padding: 1rem;
+    font-size: 2rem;
+    grid-area: title;
+}
+
+/* Creates spacing to increase readability */
+.headline{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+   
+}
+
+.blogTitle{
+    font-family: 'Google Sans', 'Courier New', 'Courier', 'monospace';
+  
+}
+
+.blogEntry{
+    padding: 1em;
+}
+
+/* Styles page grid layout */
+#pageGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header'
+                        'title'
+                        'blogs'
+                        'footer';
+}
+
+header{
+    grid-area: header;
+}
+
+#blogs{
+    grid-area: blogs;
+}
+
+footer{
+    grid-area: footer;
+}

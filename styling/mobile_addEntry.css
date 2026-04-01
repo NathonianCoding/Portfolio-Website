@@ -1,0 +1,102 @@
+/* styles the nav bar and my name in the header */
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    gap: 2rem;
+    background-color: rgb(0, 179, 255);
+}
+/* Styles the list of links in header */
+
+.topbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+    padding-top:1rem;
+}
+
+.topbar a{
+    color: white; /*Makes colour of links in header white*/
+}
+
+#myname{
+    font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
+    padding-top:1rem;
+    color:white;
+    font-size: 2rem;
+
+}
+
+a{
+    text-decoration:none; /*Gets rid of underline of links*/
+}
+
+/*Styles the title of the page*/
+#title{
+    text-align: center;
+    text-decoration: underline;
+    padding: 1rem;
+    font-size: 2rem;
+    grid-area: title;
+}
+
+form{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    background-color: aqua;
+} 
+
+#loginButton{
+    background-color: blue;
+    color: white;
+    padding: 1em;
+    margin: 1em;
+}
+
+#blogText{
+    margin:1rem;
+}
+
+.button{
+    background-color: blue;
+    color:white;
+    padding: 1em;
+    margin: 1em;
+}
+#blogText, #blogTitle{
+    width: 75%;
+}
+
+/* Increasesheight of text entry */
+#blogText{
+    height:10em;
+}
+/* Removes default border around fieldset */
+fieldset{
+    border:none; 
+}
+
+/* Styles the page layout */
+#pageGrid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header'
+                        'title'
+                        'form'
+                        'footer';
+}
+
+header{
+    grid-area: header;
+}
+#postForm{
+    grid-area: form;
+}
+footer{
+    grid-area:footer;
+}

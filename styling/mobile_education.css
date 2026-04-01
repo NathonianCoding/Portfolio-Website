@@ -1,0 +1,80 @@
+/* styles the nav bar and my name in the header */
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    gap: 2rem;
+    background-color: rgb(0, 179, 255);
+}
+
+/* Styles the list of links in header */
+
+.topbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: rgb(0, 179, 255);
+    list-style: none;
+    padding-top:1rem;
+}
+
+.topbar a{
+    color: white; /*Makes colour of links in header white*/
+}
+
+#myname{
+    font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
+    padding-top:1rem;
+    color:white;
+    font-size: 2rem;
+
+}
+
+
+
+a{
+    text-decoration:none; /*Gets rid of underline of links*/
+}
+
+
+
+/* Makes bullet points visible */
+article{
+    padding-left: 1rem;
+}
+
+/* Styles page grid layout */
+#pageGrid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header'
+                        'title'
+                        'uni'
+                        '.'
+                        'sixthForm'
+                        'footer';
+}
+
+header{
+    grid-area: header;
+}
+
+/*Styles the title of the page*/
+#title{
+    text-align: center;
+    text-decoration: underline;
+    padding: 1rem;
+    font-size: 2rem;
+    grid-area: title;
+}
+
+#university{
+    grid-area: uni;
+}
+ #sixthForm{
+    grid-area: sixthForm;
+ }
+ footer{
+    grid-area: footer;
+ }
