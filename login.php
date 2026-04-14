@@ -4,55 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling/reset.css">
-    <link rel="stylesheet" href="styling/addEntry.css">
-    <link rel="stylesheet" href="styling/mobile_addEntry.css" media = "screen and (max-width:768px)">
+    <link rel="stylesheet" href="styling/login.css">
+    <link rel="stylesheet" href="styling/mobile_login.css" media = "screen and (max-width:768px)">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     
-    <title>Post</title>
+    <title>Login</title>
 </head>
 <body>
     <div id="pageGrid">
         <header>
             <nav role = "navigation">
-                <a href="index.html"><h1 id="myname">Nathan Berhane</h1></a>
+                <a href="index.php"><h1 id="myname">Nathan Berhane</h1></a>
                 <ul class = "topbar">
                     <a class = "link" href="education.html"><li>Education</li></a>
                     <a class = "link" href="portfolio.html"><li>Portfolio</li></a>
                     <a class = "link" href="skills.html"><li>Skills</li></a>
-                    <a class = "link" href="login.html"><li>Login</li></a>
-                    <a class = "link" href="addEntry.html"><li>Post</li></a>
-                    <a class = "link" href = "blog.html"><li>Blog</li></a>
+                    <a class = "link" href="login.php"><li>Login</li></a>
+                    <a class = "link" href="addEntry.php"><li>Post</li></a>
+                    <a class = "link" href = "viewBlog.php"><li>Blog</li></a>
                 </ul>
             </nav>
         </header>
+        <h1 id = "title">Login</h1>
 
-        <h1 id = "title">Post</h1>
-        <section id="postForm">
+        <section id="loginForm">
             
 
             <form action="process.php">
                 <fieldset>
-                    <legend>Add Blog</legend>
+                    <legend>Login</legend>
                 
-                
-                    <input type="text" id="blogTitle" placeholder="Title"><br>
+                    <label for="email"></label><br>
+                    <input type="email" id="email" placeholder="Email"><br>
 
-            
-                    <textarea name="Blog text" id="blogText" placeholder="Enter your text here"></textarea><br>
-   
-                    <input type="submit" value="Post" class="button">
-                    <input type="reset" value = "Clear" class="button">
+                    <label for="password"></label><br>
+                    <input type="password" id="password" placeholder="Password"><br>
+                
+                    <input type="submit" value = "Login" id = "loginButton">
+                    
                 </fieldset>
+
             </form>
         </section>
-
+        
         <footer>
             <hr>
             <p class = "Copyright">&copy; 2026 Nathan Berhane. All rights reserved.</p>
         </footer>
     </div>
+    
+
+
 </body>
 </html>
