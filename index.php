@@ -49,7 +49,7 @@
                 </p>
                 <br>
                 <p>
-                    I am currently collaborating with fellow students to develop more functionalities to the Pass Rota website
+                    I am currently collaborating with fellow students to add more functionalities to the Pass Rota website
                     to improve user experience. In this project I am using Django(Python) and Vue.Js.
                 </p>
             
