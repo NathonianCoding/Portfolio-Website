@@ -10,32 +10,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-    <script src ='js/addEntryValidation' defer></script>
+    <script src = "js/addEntryValidation.js" defer></script>
     
     <title>Post</title>
 </head>
 <body>
     <div id="pageGrid">
-        <header>
-            <nav role = "navigation">
-                <a href="index.php"><h1 id="myname">Nathan Berhane</h1></a>
-                <ul class = "topbar">
-                    <a class = "link" href="education.html"><li>Education</li></a>
-                    <a class = "link" href="portfolio.html"><li>Portfolio</li></a>
-                    <a class = "link" href="skills.html"><li>Skills</li></a>
-                    <a class = "link" href="login.php"><li>Login</li></a>
-                    <a class = "link" href="addEntry.php"><li>Post</li></a>
-                    <a class = "link" href = "viewBlog.php"><li>Blog</li></a>
-                </ul>
-            </nav>
-        </header>
+        <?php
+        session_start();
+        if (sizeOf($_SESSION) == 0){
+            $header = "<header>
+                <nav role = 'navigation'>
+                    <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
+                    <ul class = 'topbar'>
+                        <a class = 'link' href='education.php'><li>Education</li></a>
+                        <a class = 'link' href='portfolio.php'><li>Portfolio</li></a>
+                        <a class = 'link' href='skills.php'><li>Skills</li></a>
+                        <a class = 'link' href='login.php'><li>Login</li></a>
+                        <a class = 'link' href = 'viewBlog.php'><li>Blog</li></a>
+                    </ul>
+                </nav>
+            </header>";
+
+        }
+        else{
+            $header = "<header>
+                <p id='loggedInMessage'>Welcome Nathan</p>
+                <nav role = 'navigation'>
+                    <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
+                    <ul class = 'topbar'>
+                        <a class = 'link' href='education.php'><li>Education</li></a>
+                        <a class = 'link' href='portfolio.php'><li>Portfolio</li></a>
+                        <a class = 'link' href='skills.php'><li>Skills</li></a>
+                        <a class = 'link' href='logout.php'><li>Logout</li></a>
+                        <a class = 'link' href='addEntry.php'><li>Post</li></a>
+                        <a class = 'link' href = 'viewBlog.php'><li>Blog</li></a>
+                    </ul>
+                </nav>
+            </header>";
+
+        }
+        echo $header;
+        ?>
+    
+        
 
         <h1 id = "title">Post</h1>
         <section id="postForm">
             
 
-            <form action="process.php">
+            <form id="blogForm">
                 <fieldset>
                     <legend>Add Blog</legend>
                 

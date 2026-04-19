@@ -1,11 +1,14 @@
 ﻿function checkWantsToClear(e){
     let validChoice = false;
+    let choice;
+
     while (!validChoice){
-        let choice = window.prompt("Are you sure you want to clear this form? (y/n)");
+        choice = window.prompt("Are you sure you want to clear this form? (y/n)")
         if (choice == 'y' || choice == 'n'){
             validChoice = true;
         }
     }
+    console.log(choice);
     if (choice == 'n'){
         e.preventDefault();
     }
@@ -33,3 +36,4 @@ function checkFieldsNotEmpty(e){
 }
 
 document.getElementById('clearButton').addEventListener('click', checkWantsToClear);
+document.getElementById('blogForm').addEventListener('submit', checkFieldsNotEmpty);
