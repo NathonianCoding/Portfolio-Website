@@ -12,7 +12,7 @@
     $blogText = "";
     $blogTitle = "";
     date_default_timezone_set('Europe/London');
-    if (sizeOf($_POST)>0){
+    if (array_key_exists('blogTitle', $_POST) and array_key_exists('blogText', $_POST)){
         $blogTitle = $_POST['blogTitle'];
         $blogText = $_POST['blogText'];
     }

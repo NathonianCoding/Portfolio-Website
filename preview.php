@@ -17,7 +17,7 @@
     <div id="pageGrid">
         <?php
         session_start();
-        if (sizeOf($_SESSION) == 0){
+        if (!array_key_exists('loggedIn', $_SESSION)){
             $header = "<header>
                 <nav role = 'navigation'>
                     <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
@@ -63,7 +63,7 @@
         $_SESSION['blogTitle'] = $_POST['blogTitle'];
         $_SESSION['blogText'] = $_POST['blogText'];
         date_default_timezone_set('Europe/London');
-        if (sizeOf($_POST)>0){
+        if (array_key_exists('blogText', $_POST) and array_key_exists('blogTitle', $_POST)){
             $output = sprintf("
             <article class= 'blogEntry'>
             <div class='headline'>

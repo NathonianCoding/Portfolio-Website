@@ -18,7 +18,8 @@
         <?php
             session_start();
             
-            if (sizeOf($_SESSION) == 0){
+            
+            if (!array_key_exists('loggedIn', $_SESSION)){
                 $header = "<header>
                     <nav role = 'navigation'>
                         <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
@@ -88,22 +89,77 @@
                 $offset++;
             }
             $_SESSION['ordered_blog_list'] = $list_of_blogs;
+          
            
         ?>
+
         <h1 id="title">My Blog</h1>
 
         <section id= "blogs">
+        <form action = "viewBlog.php" method = "POST">
+            <label for="monthFilter">Month</label>
+
+            
             <?php
+                $dropDownMenu = "<select name='monthFilter' id='monthFilter'>
+                <option value='No Filter'>No Filter</option>";
+                
+            
+                
+                $months = [];
+                // adds each unique month to the array $months a specific month is represented by a minth and year
+                foreach($list_of_blogs as $key => $value){
+                    $month = DateTimeImmutable::createFromFormat('d/m/Y H:i', $value['dateTime'])->format('M Y');
+                    if (!in_array($month, $months)){
+                        array_push($months, $month);
+                    }
+                    
+                }
+                
+                // add each month as an option within a select element
+                foreach($months as $key => $value){
+                
+                    if (array_key_exists('monthFilter', $_POST) and $_POST['monthFilter'] == $value){
+                        $dropDownMenu= $dropDownMenu . sprintf("<option value='%s' selected>%s</option>", $value, $value);
+                    }
+                    else{
+                        $dropDownMenu= $dropDownMenu . sprintf("<option value='%s'>%s</option>", $value, $value);
+
+                    }
+                    
+                }
+                
+                $dropDownMenu = $dropDownMenu . "</select>";
+                echo $dropDownMenu;
+            
+            ?>
+            <input type="submit" value = "Apply Filter" class = "button">
+            
+        </form>    
+            
+
+
+
+
+            <?php
+                $filter = 'No Filter';
+               
+                if (array_key_exists('monthFilter', $_POST)){
+                    $filter = $_POST['monthFilter'];
+                }
                 // displays blogs in correct order
                 foreach($list_of_blogs as $key => $value){
-                    $blog = sprintf("<article class = 'blogEntry'>
-                        <div class = 'headline'>
-                        <h1 class = 'blogTitle'>%s</h1>
-                        <i>%s</i>
-                        </div>
-                        <p>%s</p>
-                        </article>", $value['title'], $value['dateTime'], $value['entry']);
-                    echo $blog;
+                    $month = DateTimeImmutable::createFromFormat('d/m/Y H:i', $value['dateTime'])->format('M Y');
+                    if ($filter == $month || $filter == 'No Filter'){
+                        $blog = sprintf("<article class = 'blogEntry'>
+                            <div class = 'headline'>
+                            <h1 class = 'blogTitle'>%s</h1>
+                            <i>%s</i>
+                            </div>
+                            <p>%s</p>
+                            </article>", $value['title'], $value['dateTime'], $value['entry']);
+                        echo $blog;
+                    }
                 }
             ?>
         </section>

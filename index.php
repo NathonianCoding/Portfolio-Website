@@ -19,7 +19,7 @@
     
         <?php
         session_start();
-        if (sizeOf($_SESSION) == 0){
+        if (!array_key_exists('loggedIn', $_SESSION)){
             $header = "<header>
                 <nav role = 'navigation'>
                     <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
