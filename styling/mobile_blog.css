@@ -60,6 +60,21 @@ a{
     padding: 1em;
 }
 
+/* Defines styling for a button menu using flex */
+.button{
+    background-color: blue;
+    color:white;
+    padding: 0.2em;
+    margin: 0.5em;
+    border-radius: 50%;
+}
+
+.buttonMenu{
+    display: flex;
+    gap: 1rem;
+
+}
+
 /* Styles page grid layout */
 #pageGrid{
     display: grid;
