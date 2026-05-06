@@ -53,41 +53,42 @@
             }
             echo $header;
 
-        //obtains blogs from database and sorts them from most recent to least recent
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "website_portfolio";
-        // Creates connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        $sql = "SELECT title, entry, dateTime FROM blogs";
-        $res = $conn->query($sql);
+            //obtains blogs from database and sorts them from most recent to least recent
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "website_portfolio";
+            // Creates connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            $sql = "SELECT title, entry, dateTime FROM blogs";
+            $res = $conn->query($sql);
 
-        $record = $res->fetch_assoc();
+            $record = $res->fetch_assoc();
 
-        $list_of_blogs = [];
-        // appends all blogs from db to $list_of_blogs
-        while ($record){
-            array_push($list_of_blogs, $record);
-            $record = $res->fetch_assoc();   
-        }
-        // sorts array in descending order of dateTime of post
-        $swap = true;
-        $offset = 0;
-        while ($swap == true) {
-            $swap = false;
-            for ($index = 0; $index < array_key_last($list_of_blogs) - $offset; $index++) {
-                $curr = DateTimeImmutable::createFromFormat('d/m/Y H:i', $list_of_blogs[$index]['dateTime'])->getTimestamp();
-                $next = DateTimeImmutable::createFromFormat('d/m/Y H:i', $list_of_blogs[$index + 1]['dateTime'])->getTimestamp();
-
-                if ($curr < $next) {
-                    $swap = true;
-                    [$list_of_blogs[$index], $list_of_blogs[$index + 1]] = [$list_of_blogs[$index + 1], $list_of_blogs[$index]];
-                }
+            $list_of_blogs = [];
+            // appends all blogs from db to $list_of_blogs
+            while ($record){
+                array_push($list_of_blogs, $record);
+                $record = $res->fetch_assoc();   
             }
+            
+            // sorts array in descending order of dateTime of post
+            $swap = true;
+            $offset = 0;
+            while ($swap == true) {
+                $swap = false;
+                for ($index = 0; $index < array_key_last($list_of_blogs) - $offset; $index++) {
+                    $curr = DateTimeImmutable::createFromFormat('d/m/Y H:i', $list_of_blogs[$index]['dateTime'])->getTimestamp();
+                    $next = DateTimeImmutable::createFromFormat('d/m/Y H:i', $list_of_blogs[$index + 1]['dateTime'])->getTimestamp();
 
-            $offset++;
-        }
+                    if ($curr < $next) {
+                        $swap = true;
+                        [$list_of_blogs[$index], $list_of_blogs[$index + 1]] = [$list_of_blogs[$index + 1], $list_of_blogs[$index]];
+                    }
+                }
+
+                $offset++;
+            }
     
            
         ?>

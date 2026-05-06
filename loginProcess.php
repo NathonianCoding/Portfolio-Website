@@ -15,23 +15,23 @@
 </head>
 <body>
     <?php
-    session_start();
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "website_portfolio";
-    // Creates connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql = "SELECT email, password FROM admin";
-    $res = $conn->query($sql);
+        session_start();
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "website_portfolio";
+        // Creates connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        $sql = "SELECT email, password FROM admin";
+        $res = $conn->query($sql);
 
-    $record = $res->fetch_assoc();    
-   
-    if (($record['email'] == $_POST['email']) and ($record['password'] == $_POST['password'])){
-        $_SESSION['loggedIn'] = true;
-        header("Location: addEntry.php");
-    }
-    else{
+        $record = $res->fetch_assoc();    
+    
+        if (($record['email'] == $_POST['email']) and ($record['password'] == $_POST['password'])){
+            $_SESSION['loggedIn'] = true;
+            header("Location: addEntry.php");
+        }
+        else{
     ?>
     <div id="pageGrid">
         <header>
@@ -78,7 +78,7 @@
 
     </div>
     <?php
-    }
+        }
     ?>
 </body>
 </html>

@@ -18,40 +18,40 @@
     <div id="pageGrid">    
     
         <?php
-        session_start();
-        if (!array_key_exists('loggedIn', $_SESSION)){
-            $header = "<header>
-                <nav role = 'navigation'>
-                    <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
-                    <ul class = 'topbar'>
-                        <a class = 'link' href='education.php'><li>Education</li></a>
-                        <a class = 'link' href='portfolio.php'><li>Portfolio</li></a>
-                        <a class = 'link' href='skills.php'><li>Skills</li></a>
-                        <a class = 'link' href='login.php'><li>Login</li></a>
-                        <a class = 'link' href = 'viewBlog.php'><li>Blog</li></a>
-                    </ul>
-                </nav>
-            </header>";
+            session_start();
+            if (!array_key_exists('loggedIn', $_SESSION)){
+                $header = "<header>
+                    <nav role = 'navigation'>
+                        <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
+                        <ul class = 'topbar'>
+                            <a class = 'link' href='education.php'><li>Education</li></a>
+                            <a class = 'link' href='portfolio.php'><li>Portfolio</li></a>
+                            <a class = 'link' href='skills.php'><li>Skills</li></a>
+                            <a class = 'link' href='login.php'><li>Login</li></a>
+                            <a class = 'link' href = 'viewBlog.php'><li>Blog</li></a>
+                        </ul>
+                    </nav>
+                </header>";
 
-        }
-        else{
-            $header = "<header>
-                <p id='loggedInMessage'>Welcome Nathan</p>
-                <nav role = 'navigation'>
-                    <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
-                    <ul class = 'topbar'>
-                        <a class = 'link' href='education.php'><li>Education</li></a>
-                        <a class = 'link' href='portfolio.php'><li>Portfolio</li></a>
-                        <a class = 'link' href='skills.php'><li>Skills</li></a>
-                        <a class = 'link' href='logout.php'><li>Logout</li></a>
-                        <a class = 'link' href='addEntry.php'><li>Post</li></a>
-                        <a class = 'link' href = 'viewBlog.php'><li>Blog</li></a>
-                    </ul>
-                </nav>
-            </header>";
+            }
+            else{
+                $header = "<header>
+                    <p id='loggedInMessage'>Welcome Nathan</p>
+                    <nav role = 'navigation'>
+                        <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
+                        <ul class = 'topbar'>
+                            <a class = 'link' href='education.php'><li>Education</li></a>
+                            <a class = 'link' href='portfolio.php'><li>Portfolio</li></a>
+                            <a class = 'link' href='skills.php'><li>Skills</li></a>
+                            <a class = 'link' href='logout.php'><li>Logout</li></a>
+                            <a class = 'link' href='addEntry.php'><li>Post</li></a>
+                            <a class = 'link' href = 'viewBlog.php'><li>Blog</li></a>
+                        </ul>
+                    </nav>
+                </header>";
 
-        }
-        echo $header;
+            }
+            echo $header;
         ?>
 
 
