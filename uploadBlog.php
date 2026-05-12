@@ -8,6 +8,7 @@
 <body>
     <?php
         session_start();
+       
         // if a POST request is sent from addEntry.php the form contents are in $_POST
         $blogText = "";
         $blogTitle = "";

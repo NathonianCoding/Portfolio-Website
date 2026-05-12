@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    
+    <script src = "js/refreshCachedPage.js" defer></script>
     <title>Skills</title>
 </head>
 <body>
     <div id="pageGrid">
         <?php
             session_start();
+            
             if (!array_key_exists('loggedIn', $_SESSION)){
                 $header = "<header>
                     <nav role = 'navigation'>

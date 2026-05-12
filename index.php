@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styling/mobile_index.css" media = "screen and (max-width:768px)">
-
+    <script src = "js/refreshCachedPage.js" defer></script>
+    
     <title>Homepage</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
     
         <?php
             session_start();
+           
             if (!array_key_exists('loggedIn', $_SESSION)){
                 $header = "<header>
                     <nav role = 'navigation'>

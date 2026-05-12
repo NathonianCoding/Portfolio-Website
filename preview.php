@@ -11,13 +11,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Play:wght@400;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src = "js/refreshCachedPage.js" defer></script>
     <title>Preview</title>
 </head>
 <body>
     <div id="pageGrid">
         <?php
             session_start();
+            
+            
             if (!array_key_exists('loggedIn', $_SESSION)){
+                header("Location: index.php");
                 $header = "<header>
                     <nav role = 'navigation'>
                         <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>

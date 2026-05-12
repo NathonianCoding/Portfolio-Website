@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <script src = "js/addEntryValidation.js" defer></script>
+    <script src = "js/refreshCachedPage.js" defer></script>
     
     <title>Post</title>
 </head>
@@ -18,7 +19,10 @@
     <div id="pageGrid">
         <?php
             session_start();
+            
+
             if (!array_key_exists('loggedIn', $_SESSION)){
+                header('Location: index.php');
                 $header = "<header>
                     <nav role = 'navigation'>
                         <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>

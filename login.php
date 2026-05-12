@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src = "js/refreshCachedPage.js" defer></script>
     
     <title>Login</title>
 </head>
@@ -17,6 +18,7 @@
     <div id="pageGrid">
         <?php
             session_start();
+           
             $header = "<header>
                     <nav role = 'navigation'>
                         <a href='index.php'><h1 id='myname'>Nathan Berhane</h1></a>
