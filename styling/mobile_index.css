@@ -38,7 +38,6 @@ a{
 /* Uses flex to put the image next to the about me paragraph */
 #aboutme{
     display:flex;
-    flex-direction: column;
     gap:1rem;
     margin:1rem;
 

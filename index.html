@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styling/main.min.css">
+
     <link rel="stylesheet" href="styling/reset.css">
     <link rel="stylesheet" href="styling/index.css">
 
@@ -10,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styling/mobile_index.css" media = "screen and (max-width:768px)">
-
+    
     <title>Homepage</title>
 </head>
 <body>
@@ -18,15 +21,31 @@
     <div id="pageGrid">    
     
         <header>
-            <nav role = "navigation">
-                <a href="index.html"><h1 id="myname">Nathan Berhane</h1></a>
-                <ul class = "topbar">
-                    <a class = "link" href="education.html"><li>Education</li></a>
-                    <a class = "link" href="portfolio.html"><li>Portfolio</li></a>
-                    <a class = "link" href="skills.html"><li>Skills</li></a>
-                    <a class = "link" href = "news.html"><li>News</li></a>
-                </ul>
-            </nav>
+            <nav class="navbar navbar-expand-lg bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><h1 id="myname">Nathan Berhane</h1></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="education.html">Education</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" href="skills.html">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" href="news.html">News</a>
+                        </li>  
+                    </ul>
+                    
+                    </div>
+                </div>
+                </nav>
         </header>
 
 
@@ -74,12 +93,12 @@
         </aside>
 
         <footer>
-            <hr>
+          
             <p class = "Copyright">&copy; 2026 Nathan Berhane. All rights reserved.</p>
         </footer>
     </div>
   
    
-    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>    
 </body>
 </html>

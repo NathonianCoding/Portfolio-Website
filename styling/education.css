@@ -29,6 +29,14 @@ nav{
 
 }
 
+section{
+    display: block;
+    margin: 1rem;
+    border: 0.25em solid black;
+    border-radius:5%;
+    background-color: rgb(152, 216, 244);
+
+}
 
 
 a{
@@ -73,6 +81,7 @@ header{
  }
  footer{
     grid-area: footer;
+    background-color: rgb(0, 179, 255); 
  }
 
 

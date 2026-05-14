@@ -1,0 +1,13 @@
+﻿$primary: rgb(0, 179, 255);
+.navbar-nav{
+    display:flex !important;
+    gap:2rem !important;
+}
+
+.nav-link:hover, .navbar-brand:hover{
+    text-decoration: underline;
+    color:white !important;
+    text-decoration-color:white;
+
+}
+@import '../node_modules/bootstrap/scss/bootstrap';

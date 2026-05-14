@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling/main.min.css">
     <link rel="stylesheet" href="styling/reset.css">
     <link rel="stylesheet" href="styling/news.css">
     <link rel="stylesheet" href="styling/mobile_news.css" media="screen and (max-width:768px)">
@@ -16,15 +17,31 @@
 <body>
     <div id="pageGrid">
         <header>
-            <nav role = "navigation">
-                <a href="index.html"><h1 id="myname">Nathan Berhane</h1></a>
-                <ul class = "topbar">
-                    <a class = "link" href="education.html"><li>Education</li></a>
-                    <a class = "link" href="portfolio.html"><li>Portfolio</li></a>
-                    <a class = "link" href="skills.html"><li>Skills</li></a>
-                    <a class = "link" href = "news.html"><li>News</li></a>
-                </ul>
-            </nav>
+            <nav class="navbar navbar-expand-lg bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><h1 id="myname">Nathan Berhane</h1></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="education.html">Education</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" href="skills.html">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" href="news.html">News</a>
+                        </li>  
+                    </ul>
+                    
+                    </div>
+                </div>
+                </nav>
         </header>
 
         <h1 id = "title">News</h1>
@@ -34,11 +51,11 @@
 
             <article class="blogEntry">
                 <div class="headline">
-                    <h1 class="blogTitle">AI and Operations Internship at PolishPad</h1>
+                    <h1 class="blogTitle">AI and Operations Internship at Polishpad</h1>
                     <i>March 2026</i>
                 </div>
                 <p> 
-                    I am proud to announce that I have secured an internship at PolishPad.
+                    I am proud to announce that I have secured an internship at Polishpad.
                     I will be leveraging AI tools to optimise workflow and improve user experience.
                     I look forward to this new challenge!
                 </p>
@@ -50,7 +67,7 @@
             <article class = "blogEntry">
                 <div class="headline">
                     <h1 class="blogTitle">Course Representative at Queen Mary Univeristy of London</h1>
-                    <i>Octber 2025</i>
+                    <i>October 2025</i>
                 </div>
                 <p>
                     I was elected course rep for my course (Computer Science with AI) in October.
@@ -64,9 +81,10 @@
             
 
         <footer>
-            <hr>
+           
             <p class = "Copyright">&copy; 2026 Nathan Berhane. All rights reserved.</p>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script> 
 </body>
 </html>

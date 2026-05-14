@@ -62,6 +62,7 @@ header{
 
 footer{
     grid-area: footer;
+    background-color: rgb(0, 179, 255); 
 }
 #python{
     grid-area: python;

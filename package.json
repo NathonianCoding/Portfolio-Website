@@ -1,0 +1,19 @@
+{
+  "name": "portfolio_website",
+  "version": "1.0.0",
+  "description": "My website portfolio",
+  "repository": {
+    "type": "git",
+    "url": "Portfolio-Website"
+  },
+  "license": "ISC",
+  "author": "Nathan Berhane",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
