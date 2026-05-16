@@ -56,6 +56,8 @@ a{
                         'java'
                         'html'
                         'css'
+                        'js'
+                        'php'
                         'git'
                         'github'
                         'footer';
@@ -83,7 +85,12 @@ footer{
 #css{
     grid-area: css;
 }
-
+#js{
+    grid-area: js;
+}
+#php{
+    grid-area: php;
+}
 #git{
     grid-area: git;
 }
@@ -92,7 +99,7 @@ footer{
     grid-area: github;
 }
 
-#javaImage, #htmlImage, #cssImage, #gitImage, #githubImage{
+#javaImage, #htmlImage, #cssImage, #gitImage, #githubImage, #jsImage, #phpImage{
     width:50%;
 }
 
