@@ -47,13 +47,13 @@ article{
 /* Styles page grid layout */
 #pageGrid{
     display:grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 'header'
-                        'title'
-                        'uni'
-                        '.'
-                        'sixthForm'
-                        'footer';
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'header header'
+                        'title .'
+                        'lineSegment1 uni'
+                        '. .'
+                        'lineSegment2 sixthForm'
+                        'footer footer';
 }
 
 header{
