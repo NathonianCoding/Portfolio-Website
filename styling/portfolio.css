@@ -7,6 +7,38 @@ nav{
    
 }
 
+/* styles screenshots for each project*/
+.projectScreenshot{
+    width:100%;
+    position:relative;  
+}
+
+.projectScreenshot:hover{
+    background-color: azure;
+}
+.screenshot{
+    
+    left:0px;
+    top:0px; 
+    width:100%; 
+    object-fit:fill;
+   
+}
+
+
+.externalLinkIcon{
+    position: absolute;
+    right:0px;
+    top:0px;  
+    width: 10%;
+}
+/* Styles tags for each project */
+.tag{
+    border: 0.1rem solid lightgrey;
+    border-radius: 25%;
+    background-color:lightgrey;
+    margin-right:1rem;
+}
 /* Styles the list of links in header */
 
 .topbar{
