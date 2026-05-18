@@ -1,11 +1,4 @@
-/* styles the nav bar and my name in the header */
-nav{
-    display: flex;
-    justify-content: space-around; 
-    gap: 2rem;
-    background-color: rgb(0, 179, 255);
-   
-}
+
 
 /* styles screenshots for each project*/
 .projectScreenshot{
@@ -39,20 +32,7 @@ nav{
     background-color:lightgrey;
     margin-right:1rem;
 }
-/* Styles the list of links in header */
 
-.topbar{
-    display: flex;
-    justify-content: space-around;
-    gap: 1em;
-    background-color: rgb(0, 179, 255);
-    list-style: none;
-    padding-top:1rem;
-}
-
-.topbar a{
-    color: white; /*Makes colour of links in header white*/
-}
 
 #myname{
     font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
@@ -106,6 +86,9 @@ section{
 }
 section h2{
     background-color: rgb(154, 242, 242);
+    border: 0.1em solid rgb(154, 242, 242);
+    border-radius:10px;
+
     margin:0.4em;
 
 }
@@ -117,7 +100,8 @@ section h2{
     grid-template-areas: 'header header header header header'
                           '. . title . .'
                           'experience experience . projects projects'
-                          'volunteering volunteering . cv cv'
+                          'volunteering volunteering . projects projects'
+                          'cv cv . projects projects'
                           'footer footer footer footer footer';
 }
 

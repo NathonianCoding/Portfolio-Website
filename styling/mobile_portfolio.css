@@ -1,28 +1,4 @@
-/* styles the nav bar and my name in the header */
-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; 
-    gap: 2rem;
-    background-color: rgb(0, 179, 255);
-   
-}
 
-/* Styles the list of links in header */
-
-.topbar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1em;
-    background-color: rgb(0, 179, 255);
-    list-style: none;
-    padding-top:1rem;
-}
-
-.topbar a{
-    color: white; /*Makes colour of links in header white*/
-}
 
 #myname{
     font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
