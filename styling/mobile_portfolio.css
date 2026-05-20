@@ -41,10 +41,7 @@ article ul{
     padding-left: 2em; /*Creates space to make dates more visible*/
 }
 
-/*Makes it easier to process different sections*/
-h2{
-    background-color: rgb(154, 242, 242);
-}
+
 
 /* Defines page grid layout */
 #pageGrid{
