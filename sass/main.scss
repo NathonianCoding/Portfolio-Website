@@ -1,14 +1,17 @@
-﻿$primary: rgb(0, 179, 255);
+﻿$primary: #1e293b ;
 .navbar-nav{
     display:flex !important;
     gap:2rem !important;
    
 }
 
+.nav-link{
+    color:white !important;
+}
 .nav-link:hover, .navbar-brand:hover{
     text-decoration: underline;
     color:white !important;
-    text-decoration-color:white;
+   
 
 }
 header{

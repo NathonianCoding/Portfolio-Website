@@ -32,13 +32,14 @@ article ul{
 
 /* Creates spacing to increase readability */
 .headline{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin-top: 1em;
 }
 
 .date{
-    font-family: 'Playfair', 'Courier New', 'Courier', 'monospace';
-    padding-left: 2em; /*Creates space to make dates more visible*/
+    padding-left: 1em; /*Creates space to make dates more visible*/
+    font-size:70%;
 }
 
 
@@ -48,7 +49,6 @@ article ul{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 'header'
-                          'title'
                           'experience'
                           'projects'
                           'volunteering'
@@ -60,14 +60,7 @@ header{
     grid-area: header;
 }
 
-/*Styles the title of the page*/
-#title{
-    text-align: center;
-    text-decoration: underline;
-    padding: 1rem;
-    font-size: 2rem;
-    grid-area: title;
-}
+
 
 #experience{
     grid-area: experience;
