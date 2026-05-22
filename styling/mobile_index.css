@@ -26,7 +26,7 @@ a{
 
 
 #githubIcon{
-    width:100%; /*Sets width to the width of the grid cell*/
+    width:2rem; /*Sets width to the width of the grid cell*/
     background-color: black;
     
     
@@ -34,7 +34,7 @@ a{
 }
 
 #linkedInIcon{
-    width:100%; /*Sets width to the width ofd the grid  cell*/
+    width:2.4rem; /*Sets width to the width ofd the grid  cell*/
 }
 
 /* Defines grid layout for the entire index.html page */
