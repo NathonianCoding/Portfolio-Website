@@ -13,13 +13,7 @@ a{
 
 
 
-/* Creates spacing to increase readability */
-.headline{
-    width: 100%;
-    display: flex;
-    gap: 1em;
-   
-}
+
 
 .blogTitle{
     font-family: 'Google Sans', 'Courier New', 'Courier', 'monospace';

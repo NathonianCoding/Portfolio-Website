@@ -22,10 +22,13 @@ a{
 
 /* Creates spacing to increase readability */
 .headline{
-    width: 100%;
     display: flex;
-    gap: 1em;
-   
+    flex-direction: column;
+}
+
+.date{
+    padding-left: 1em; /*Creates space to make dates more visible*/
+    font-size: 70%;
 }
 
 .blogTitle{
@@ -58,4 +61,11 @@ header{
 footer{
     grid-area: footer;
    
+}
+article{
+    display: block;
+    margin: 1rem;
+    border: 0.25em solid black;
+    border-radius:5%;
+    background-color: #1e293b;
 }
