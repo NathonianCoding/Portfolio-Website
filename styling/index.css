@@ -71,12 +71,12 @@ aside{
 
 
 #javaImage, #htmlImage, #cssImage, #gitImage, #githubImage, #jsImage #phpImage{
-    width:50%;
+    width:100px;
     background-color: white;
 }
 
 #pythonImage{
-    width: 70%;
+    width: 100px;
 }
 #githubImage{
     background-color: black;
