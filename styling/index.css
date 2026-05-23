@@ -47,6 +47,7 @@ a{
 
 #linkedInIcon{
     width:2.4rem; 
+    background-color: white;
 }
 
 
@@ -57,12 +58,30 @@ aside{
 
 
 
-
 #socials{
     display:flex;
     gap:1rem;
     
 }
+#techSkills{
+    display: flex;
+    flex-wrap:wrap;
+    gap:1em;
+}
+
+
+#javaImage, #htmlImage, #cssImage, #gitImage, #githubImage, #jsImage #phpImage{
+    width:50%;
+    background-color: white;
+}
+
+#pythonImage{
+    width: 70%;
+}
+#githubImage{
+    background-color: black;
+}
+
 
 
 
