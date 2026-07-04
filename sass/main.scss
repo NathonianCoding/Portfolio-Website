@@ -8,6 +8,11 @@
 .nav-link{
     color:white !important;
 }
+
+.nav-link.active:focus-visible{
+    outline:2px solid #ffffff;
+    outline-offset: 2px;
+}
 .nav-link:hover, .navbar-brand:hover{
     text-decoration: underline;
     color:white !important;
