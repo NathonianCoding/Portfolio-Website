@@ -1,4 +1,5 @@
 
+
 #myname{
     font-family: 'Comfortaa', 'Courier New', 'Courier', 'monospace';
     padding-top:1rem;
@@ -11,89 +12,77 @@ a{
     text-decoration:none; /*Gets rid of underline of links*/
 }
 
-/* Uses flex to put the image next to the about me paragraph */
-#aboutme{
-    display:flex;
-    gap:1rem;
-    margin:1rem;
 
+
+article{
+    padding-left: 1rem;
 }
 
-#profilePicture{
-    width: 100%;
+/* Indents bullet points */
+article ul{
+    margin: 1em;
 }
 
 
 
-#githubIcon{
-    width:2rem; /*Sets width to the width of the grid cell*/
-    background-color: black;
-    
-    
-    
+/* Sets colour of text for project links to black */
+.projectLink{
+    color: black; 
 }
 
-#linkedInIcon{
-    width:2.4rem; /*Sets width to the width ofd the grid  cell*/
+/* Creates spacing to increase readability */
+.headline{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
 }
 
-/* Defines grid layout for the entire index.html page */
+.date{
+    padding-left: 1em; /*Creates space to make dates more visible*/
+    font-size:70%;
+}
+
+
+
+/* Defines page grid layout */
 #pageGrid{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-areas: 'header header header'
-                          'aboutme aboutme aboutme'
-                          'githubLink . linkedInLink'
-                          
-                          'footer footer footer';
-  
-    /* justify-content: space-around; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header'
+                          'aboutme'
+                          'experience'
+                          'projects'
+                          'volunteering'
+                         
+                          'footer';
+}
+
+#aboutme{
+    grid-area:aboutme;
 }
 
 header{
     grid-area: header;
 }
-#aboutme{
-    grid-area: aboutme;
+
+
+
+#experience{
+    grid-area: experience;
 }
 
-#githubLink{
-    grid-area: githubLink;
+#projects{
+    grid-area: projects;
 }
 
-#linkedInLink{
-    grid-area: linkedInLink;
+#volunteering{
+    grid-area: volunteering;
+}
+
+#cv{
+    grid-area: cv;
 }
 
 footer{
-    grid-area: footer;    
-}
-
-/* Handles hover effect */
-#githubLink a{
-    padding:0;
-    grid-area: githubLink;
-    transition: padding 1s; /* Takes 1 second to change the padding*/
-}
-#linkedInLink a{
-    padding:0;
-    grid-area: linkedInLink;
-    transition: padding 1s; /* Takes 1 second to change the padding*/
-}
-
-
-
-
-
-
-/* Sets the final padding of the links*/
-#githubLink a:hover{
-    padding: 1em;
-   
-    
-}
-
-#linkedInLink a:hover{
-    padding:1em;
-    
+    grid-area: footer;
 }
