@@ -76,6 +76,7 @@ article ul{
 /*Makes it easier to process different sections*/
 section{
     display: block;
+    padding: clamp(1rem, 2vw, 3rem);
     margin: 1rem;
     border: 0.25em solid black;
     border-radius:5%;
@@ -96,12 +97,33 @@ section h2{
     display: grid;
     grid-template-columns: 1fr 1fr 0.1rem 1fr 1fr;
     grid-template-areas: 'header header header header header'
-                          
+                          'aboutme aboutme aboutme aboutme aboutme'
                           'experience experience . projects projects'
                           'volunteering volunteering . projects projects'
-                          'cv cv . projects projects'
+                          
                           'footer footer footer footer footer';
 }
+
+/* Uses flex to put the image next to the about me paragraph */
+#aboutme{
+    
+    gap:1rem;
+    margin:1rem;
+    grid-area:aboutme;
+
+}
+
+#profilePicture{
+    display: block;
+    border: 0.1rem solid black;
+    border-radius: 50%;
+    width: 30%;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:150px;
+
+}
+
 
 header{
     grid-area: header;

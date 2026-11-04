@@ -49,11 +49,16 @@ article ul{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 'header'
+                          'aboutme'
                           'experience'
                           'projects'
                           'volunteering'
-                          'cv'
+                         
                           'footer';
+}
+
+#aboutme{
+    grid-area:aboutme;
 }
 
 header{
